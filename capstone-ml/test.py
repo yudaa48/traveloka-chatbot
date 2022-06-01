@@ -398,6 +398,8 @@ def accuracy(y_true, y_pred):
   y_true = tf.reshape(y_true, shape=(-1, MAX_LENGTH - 1))
   return tf.keras.metrics.sparse_categorical_accuracy(y_true, y_pred)
 
+
+
 # initialize and compile model within strategy scope
 with strategy.scope():
   model = transformer(
@@ -549,3 +551,16 @@ def predict(sentence):
   return predicted_sentence
 
 output = predict('How much Flight Refund Amount Deductions ?')
+
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello():
+    return "Welcome to machine learning model APIs!"
+
+
+if __name__ == '__main__':
+    app.run(debug=True) 
