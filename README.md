@@ -29,7 +29,6 @@ Has several responsibility such as:
 
 ### Cloud Computing
 1. Cloud Platform: Google Cloud Platform
-2. Programming Language: Javascript
-3. Framework: Node.JS
-4. Web Server: Hapi JS
-5. Server: VM Instances
+2. Programming Language: Python
+3. Web Server: Flask API
+4. Server: VM Instances
