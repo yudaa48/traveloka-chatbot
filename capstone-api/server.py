@@ -3,42 +3,25 @@ from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 import tensorflow as tf
 import pandas as pd
+import pickle
 import io
-import os
 import re
-from google.cloud import storage
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 # Initialize Flask
 app = Flask(__name__)
 
-## Global model variable
-model = None
+# Import model
+model = load_model("chatbot_model.h5")
+tokenizer = pickle.load(open("tokenizer.pickle", "rb"))
 
-# Download model file from cloud storage bucket
-def download_pkl_model_file():
-    # Model Bucket details
-    BUCKET_NAME     = "ml-model-chabot"
-    PROJECT_ID      = "capstone-chatbot-c22-cb04"
-    GCS_PKL_FILE    = "tokenizerkebijakan.pickle" ## butuh tokenizer
-    GCS_MODEL_FILE  = "model_kebijakan.h5"  ## export model
+# Maximum sentence length
+MAX_LENGTH = 40
 
-    # Initialise a client
-    client   = storage.Client(PROJECT_ID)
-    
-    # Create a bucket object for our bucket
-    bucket   = client.get_bucket(BUCKET_NAME)
-    
-    # Create a blob object from the filepath
-    pkl   = bucket.blob(GCS_PKL_FILE)
-    mdl   = bucket.blob(GCS_MODEL_FILE)
-
-    folder = '/tmp/'
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    # Download the file to a destination
-    pkl.download_to_filename(folder + "policy_tokenizer.pickle") ## butuh tokenizer
-    mdl.download_to_filename(folder + "policy_model.h5") ## export model
+# Define start and end token to indicate the start and end of a sentence
+START_TOKEN, END_TOKEN = [tokenizer.vocab_size], [tokenizer.vocab_size + 1]
 
 # Initialize Flask server with error handling
 @app.route("/")
@@ -106,9 +89,9 @@ def predict(sentence):
 
   predicted_sentence = tokenizer.decode(
       [i for i in prediction if i < tokenizer.vocab_size])
-
+ 
   print('Input: {}'.format(sentence))
   print('Output: {}'.format(predicted_sentence))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
