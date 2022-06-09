@@ -1,4 +1,5 @@
 # Import Module
+import re
 from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 import tensorflow as tf
@@ -13,15 +14,15 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # Initialize Flask
 app = Flask(__name__)
 
-# Import model
-model = load_model("chatbot_model.h5")
-tokenizer = pickle.load(open("tokenizer.pickle", "rb"))
+# # Import model
+# model = load_model("chatbot_model.h5")
+# tokenizer = pickle.load(open("tokenizer.pickle", "rb"))
 
-# Maximum sentence length
-MAX_LENGTH = 40
+# # Maximum sentence length
+# MAX_LENGTH = 40
 
-# Define start and end token to indicate the start and end of a sentence
-START_TOKEN, END_TOKEN = [tokenizer.vocab_size], [tokenizer.vocab_size + 1]
+# # Define start and end token to indicate the start and end of a sentence
+# START_TOKEN, END_TOKEN = [tokenizer.vocab_size], [tokenizer.vocab_size + 1]
 
 # Initialize Flask server with error handling
 @app.route("/")
@@ -90,8 +91,9 @@ def predict(sentence):
   predicted_sentence = tokenizer.decode(
       [i for i in prediction if i < tokenizer.vocab_size])
  
-  print('Input: {}'.format(sentence))
-  print('Output: {}'.format(predicted_sentence))
+  print('Input: {}'.format(sentence)) ## input dari MD
+  print('Output: {}'.format(predicted_sentence)) ## output dari model ML
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    # app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run()
