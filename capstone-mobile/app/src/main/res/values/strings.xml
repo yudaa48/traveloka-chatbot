@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">chatbottesting</string>
+    <string name="Hint"> Type a message...</string>
+    <string name="name">July Maria</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="model">This is a sample message that will appear</string>
+    <string name="traveloka">TravelokaChatbot</string>
+    <string name="Helpdesk_app">Helpdesk App</string>
+    <string name="helpdesk_center">Helpdesk Center</string>
+    <string name="need_help">Need Help?</string>
+    <string name="all_time">24/7</string>
+    <string name="version">v1.0.0</string>
+    <string name="tell_us">Tell us how we can help</string>
+    <string name="Our_crew">Our crew of superheroes are standing by for services &amp; support!</string>
+    <string name="chat">Chat</string>
+    <string name="start">Start a conversation now!</string>
+    <string name="faq">FAQs</string>
+    <string name="find">Find intellegent answers instantly!</string>
+    <string name="hint"> Type a message...</string>
+    <string name="endconversation">End Conversation</string>
+</resources>
