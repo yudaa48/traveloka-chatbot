@@ -1,5 +1,3 @@
-import os
-#import shutil
 import pandas as pd
 
 import tensorflow as tf
@@ -8,8 +6,34 @@ import tensorflow_text as text
 from sklearn.preprocessing import LabelBinarizer
 
 
-model = tf.keras.models.load_model(('https://storage.googleapis.com/ml-model-chabot/bert-model.h5'), custom_objects={'KerasLayer':hub.KerasLayer})
+model = tf.keras.models.load_model(('bert-model.h5'), custom_objects={'KerasLayer':hub.KerasLayer})
 
+def predicts(input):
+  trainfile="atis_intents_train.csv"
+  traindf = pd.read_csv(trainfile)
+  traindf.columns = ['intent', 'text']
+  traindf = traindf.reindex(columns=['text', 'intent'])
+
+  trainfeatures=traindf.copy()
+  trainlabels=trainfeatures.pop("intent")
+
+  binarizer=LabelBinarizer()
+  trainlabels=binarizer.fit_transform(trainlabels.values)
+  
+  inputs = [input]
+
+  results = tf.nn.softmax(model(tf.constant(inputs)))
+  intents = binarizer.inverse_transform(results.numpy())
+  # print(intents)
+
+  # result_for_printing = \
+  #   [f'{results[0]}']
+  return intents[0]
+  # print()
+
+  # print(results[0])
+  # return results[0]
+  
 def predict(inputs, results):
   result_for_printing = \
     [f'input: {inputs[i]:<30} : estimated intent: {results[i]}'
@@ -37,6 +61,6 @@ binarizer=LabelBinarizer()
 trainlabels=binarizer.fit_transform(trainlabels.values)
 
 results = tf.nn.softmax(model(tf.constant(examples)))
-intents=binarizer.inverse_transform(results.numpy())
+intents = binarizer.inverse_transform(results.numpy())
 
-predict(examples, intents)
+print(predicts(examples[0]))

@@ -1,15 +1,15 @@
 from flask import Flask, request, jsonify
-from prediction import predict
+from prediction import predicts
 
 # Initialize Flask
 app = Flask(__name__)
 
 # Initialize Flask server 
 @app.route("/", methods=["POST"])
-def hello(input, results):
+def hello():
     input = request.json['message']
 
-    predicted_message = predict(input)
+    predicted_message = predicts(input)
     return predicted_message
 
 if __name__ == '__main__':
