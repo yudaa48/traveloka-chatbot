@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tv_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="345dp"
+        android:background="@drawable/ic_bubble_bot"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        tools:text="Hi there, i’m July Maria!\nNice to meet you, how can I help you?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="345dp"
+        android:background="@drawable/ic_bubble_customer"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        tools:text="Hi, July Maria! Nice to meet you, can you\nHelp me to check my refund status, please?"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
