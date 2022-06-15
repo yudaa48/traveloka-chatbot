@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.dicoding.picodiploma.chatbottesting">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.rivzdev.chatbotapp">
 
     <application
         android:allowBackup="true"
@@ -13,18 +11,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Chatbottesting"
+        android:theme="@style/Theme.ChatBotApp"
         tools:targetApi="31">
         <activity
-            android:name=".UI.MainActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="true"/>
+            android:name=".ui.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
         <activity
-            android:name=".HomePage.HomePage"
-            android:exported="true"/>
-        <activity android:name=".SplashScreen.SplashScreen"
+            android:name=".ui.HomePage"
             android:exported="true"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
+            android:theme="@style/Theme.ChatBotApp.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

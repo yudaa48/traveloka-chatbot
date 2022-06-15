@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/drawable-v24/chat_button.xml" value="0.1725" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/drawable-v24/ic_baseline_chevron_left_24.xml" value="0.1" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/drawable-v24/send_bubble.xml" value="0.1765" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/layout/message_item.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/SUCI/Downloads/chatbottesting/chatbottesting/app/src/main/res/menu/option_menu.xml" value="0.22447916666666667" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_baseline_send.xml" value="0.196" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_branding.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_bx_chat.xml" value="0.196" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_customer_support_1.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_group.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_group_1.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_helpdesk.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/font/nunito_semibold.xml" value="0.234375" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/layout/activity_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/layout/item_chat_row.xml" value="0.17192982456140352" />
       </map>
     </option>
   </component>
@@ -19,12 +24,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>

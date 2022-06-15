@@ -4,10 +4,10 @@
     <color name="faded_light_blue">#92CFEC</color>
     <color name="blue">#2155CD</color>
     <color name="teal_200">#FF03DAC5</color>
-    <color name="green_700">#019267</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="shadow">#EBFAFAFA</color>
-    <color name="soft_blue">#E8EFFF</color>
-
+    <color name="grey">#B5B5B5</color>
+    <color name="light_grey">#C4C4C4</color>
+    <color name="faded_light_grey">#E5E5E5</color>
 </resources>
