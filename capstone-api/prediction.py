@@ -1,66 +1,52 @@
 import pandas as pd
-
 import tensorflow as tf
 import tensorflow_hub as hub
+import random
 import tensorflow_text as text
 from sklearn.preprocessing import LabelBinarizer
 
+model = tf.keras.models.load_model(('final-model.h5'), custom_objects={'KerasLayer':hub.KerasLayer})
 
-model = tf.keras.models.load_model(('bert-model.h5'), custom_objects={'KerasLayer':hub.KerasLayer})
+chat_user = 'Is it possible to get a refund for a COVID-19 test that was purchased along with a flight?'
 
-def predicts(input):
-  trainfile="atis_intents_train.csv"
-  traindf = pd.read_csv(trainfile)
-  traindf.columns = ['intent', 'text']
-  traindf = traindf.reindex(columns=['text', 'intent'])
+def get_answer(input):
+    answer_data = pd.read_csv('answer_data.csv')
 
-  trainfeatures=traindf.copy()
-  trainlabels=trainfeatures.pop("intent")
+    # Fit data class intent dari dataset ke binarizernya
+    intent_label = ['book_flight', 'change_date', 'change_name', 'checkin_online',
+                    'child_onboard', 'covid_dose', 'extra_baggage', 'flight_document',
+                    'flight_ehac', 'flight_idcard', 'flight_international',
+                    'flight_recquirement', 'flight_refund', 'payment_status',
+                    'payment_verification', 'policy_corona', 'positivie_covid',
+                    'refund_status', 'refund_test', 'reschedule_flight',
+                    'reschedule_infant', 'reschedule_insurance', 'reschedule_method',
+                    'reschedule_multiconnecting', 'reschedule_partial',
+                    'reschedule_payment', 'reschedule_refund', 'reschedule_seat',
+                    'reschedule_specific', 'reschedule_voucher', 'resend_eticket',
+                    'test_covid', 'travel_aboard', 'travel_voucher', 'greeting',
+                    'greeting_response', 'courtesy_greeting', 'thanks', 'goodbye',
+                    'attractions_Surabaya', 'attractions_Bali',
+                    'attractions_Yogyakarta', 'attractions_Palembang',
+                    'attractions_Medan']
 
-  binarizer=LabelBinarizer()
-  trainlabels=binarizer.fit_transform(trainlabels.values)
-  
-  inputs = [input]
+    sentence = [input]
 
-  results = tf.nn.softmax(model(tf.constant(inputs)))
-  intents = binarizer.inverse_transform(results.numpy())
-  # print(intents)
+    binarizer = LabelBinarizer()
+    binarizer.fit_transform(intent_label)
 
-  # result_for_printing = \
-  #   [f'{results[0]}']
-  return intents[0]
-  # print()
+    # Prediksi intent chat user
+    results = tf.nn.softmax(model(tf.constant(sentence)))
+    intents = binarizer.inverse_transform(results.numpy())
 
-  # print(results[0])
-  # return results[0]
-  
-def predict(inputs, results):
-  result_for_printing = \
-    [f'input: {inputs[i]:<30} : estimated intent: {results[i]}'
-                         for i in range(len(inputs))]
-  print(*result_for_printing, sep='\n')
-  print()
+    ans = []
 
+    for index, answer in answer_data.iterrows():
+        if intents[0] in answer['intent']:
+            ans.append(answer['answer'])
+        else:
+            continue
 
-examples = [
-    ' i want to fly from boston at 838 am and arrive in denver at 1110 in the morning',  # this is the same sentence tried earlier
-    ' what airlines have flights from baltimore to seattle',
-    ' show me ground transportation in denver',
-    ' what does fare code qo mean'
-]
+    choice = (random.choice(ans))
+    return choice
 
-trainfile="atis_intents_train.csv"
-traindf = pd.read_csv(trainfile)
-traindf.columns = ['intent', 'text']
-traindf = traindf.reindex(columns=['text', 'intent'])
-
-trainfeatures=traindf.copy()
-trainlabels=trainfeatures.pop("intent")
-
-binarizer=LabelBinarizer()
-trainlabels=binarizer.fit_transform(trainlabels.values)
-
-results = tf.nn.softmax(model(tf.constant(examples)))
-intents = binarizer.inverse_transform(results.numpy())
-
-print(predicts(examples[0]))
+print(get_answer(chat_user))
