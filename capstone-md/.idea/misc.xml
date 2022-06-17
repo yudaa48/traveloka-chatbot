@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_baseline_send.xml" value="0.196" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_branding.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_bubble_bot.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_bubble_customer.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_bx_chat.xml" value="0.196" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_chat_box.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_customer_support_1.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_group.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_group_1.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_helpdesk.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1915" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/font/nunito_semibold.xml" value="0.234375" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/layout/activity_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
+        <entry key="..\:/belajar/android-studio/Capstone-Bangkit/ChatBotApp/app/src/main/res/layout/item_chat_row.xml" value="0.17192982456140352" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/font/nunito_sans.xml" value="0.234375" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/font/nunito_sans_bold.xml" value="0.234375" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/font/nunito_sans_semibold.xml" value="0.234375" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/font/nunito_semibold.xml" value="0.234375" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/layout/activity_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/layout/activity_home_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/layout/custom_alert_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/belajar/android-studio/Capstone-Project-Traveloka-Chatbot-App/app/src/main/res/layout/item_chat_row.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
