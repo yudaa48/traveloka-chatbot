@@ -1,0 +1,11 @@
+setuptools
+Flask
+gunicorn
+tensorflow
+tensorflow-text
+tensorflow-hub
+scikit-learn
+numpy
+Cython
+wheel
+pandas

@@ -1,11 +1,15 @@
 # Traveloka Chatbot Project
 Welcome to Traveloka Chatbot Project from C22-CB04 Team
 
+## Background Story:
+It’s important to company in this present day to have a tools that can help them to handle a complaint by a customer, and therefore there is customer service, but what if the proportion of customer service and customer complaint is not proportional, it will give a difficult time to the company, and therefore our group make a Chatbot that can handle the complaint by a customer. Our chatbot can answer automatically without waiting in advance for a customer. Our feature it’s just not handle a customer complain, but also have any other feature such as give a suggestion for recommendation place that must visit in the selected city and can reply the greetings too.
+
 ## Machine Learning Team
 Has several responsibility such as:
-1. Create dataset for model machine learning
-2. Development model machine learning
-3. Testing model machine learning that already trained before
+1. Collecting and Cleaning dataset
+2. Build a Model with transfer learning
+3. Testing model with model predict
+4. Use the converter to convert models with tensorflow.js
 
 ## Mobile Development Team
 Has several responsibility such as:
@@ -14,22 +18,40 @@ Has several responsibility such as:
 
 ## Cloud Computing Team
 Has several responsibility such as:
-1. Creating API Documentation
-2. Developing API for model machine learning
-3. Testing API 
+1. API endpoint development
+2. API testing development
+3. Prepare infrastructure server
+4. API deployment
+5. API testing production
 
-## Tech Stack for Developing Chatbot
+## Tools and Resources for Developing Chatbot
 
 ### Machine Learning
-1. Platform : Github, Google Colab, Pycharm
-2. Library  : Tensorflow, Sys, Os, NLTK, numpy
+1. Code Platform: Jupyter Notebook and Google Collaboration
+2. Programming Language: Python
+3. Library: Pandas, Tensorflow, Seaborn, Sklearn
 
 ### Mobile Development
-1. API & SDK : Android Studio
+1. Text Editor: Android Studio
+2. Collaboration Tools: Github
+3. Programming Language: Kotlin
+4. Design Tools: Figma
+5. Prototype: [Click Here](https://bit.ly/final-prototype-c22-cb04)
 
 ### Cloud Computing
-1. Cloud Platform: Google Cloud Platform
-2. Programming Language: Javascript
-3. Framework: Node.JS
-4. Web Server: Hapi JS
-5. Server: VM Instances
+1. Cloud Environment: Google Cloud Platform (VM Instances, Cloud Storage, VPC Network)
+2. Programming Language: Python
+3. Web Server: Flask API
+4. Server: VM Instances
+
+## Contributor
+
+1. M7004F0192 - [Annisa Rahmawati](https://www.linkedin.com/in/annisa-rahmawati-aa58ab1b1/) - Institut Teknologi Sepuluh Nopember - Machine Learning
+2. M2391F2948 - [Bonifassius Mamerutama](https://www.linkedin.com/in/bonifm/) - Universitas Sanata Dharma - Machine Learning
+3. M7004F0208 - [Irfan Andre Dharmawan](https://www.linkedin.com/in/irfanandre/) - Institut Teknologi Sepuluh Nopember - Machine Learning
+4. C2224X2038 - [Aulia Astika](https://www.linkedin.com/in/aulia-astika/) - Universitas Islam Negeri Syarif Hidayatullah - Cloud Computing
+5. C7144G1643 - [Yuda Adi Pratama](https://www.linkedin.com/in/yuda-adi-pratama/) - Universitas Nusa Mandiri - Cloud Computing
+6. C2144G1640 - [Yurika Prisilia Yoanda](https://www.linkedin.com/in/yurika-prisilia-yoanda-89b7b1161) - Universitas Nusa Mandiri - Cloud Computing
+7. A2009G0941 - [Felix Mario Chrisanto Adi](https://www.linkedin.com/in/felix-mario-chrisanto-adi-33a209227/) - Universitas Gunadarma - Mobile Development- Learningpath
+8. A2144G1644 - [Rivaldo Juliano](https://www.linkedin.com/in/rivaldo-juliano-a896a0188/) - Universitas Nusa Mandiri - Mobile Development
+9. A2211F1948 - [Suciati](https://www.linkedin.com/in/suci-ati-28457a236/) - Universitas Indraprasta PGRI - Mobile Development
