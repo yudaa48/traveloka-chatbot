@@ -4,7 +4,6 @@
 ## Screenshoot
 ![prototype](https://user-images.githubusercontent.com/54896129/174328686-5a846f43-db4c-4a86-9410-e2ae8eee8e13.png)
 
-
 ## Tools and Resources
 1. Programming Language: Kotlin
 2. IDE: Android Studio
